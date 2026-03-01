@@ -67,6 +67,10 @@ app.use((err, req, res, next) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("TaxPal API is running 🚀");
+});
+
 // 404 handler
 app.use('*', (req, res) => {
   res.status(404).json({
